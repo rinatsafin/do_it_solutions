@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// COMPONENTS
+import Header from "./components/header";
+import NewsList from "./components/new_list";
+
+
+// ReactDOM.render(<App />, document.querySelector("#root"));
