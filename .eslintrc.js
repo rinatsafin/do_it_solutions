@@ -9,12 +9,15 @@ module.exports = {
       "eslint:recommended",
       "plugin:react/recommended"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "experimentalObjectRestSpread": true
+      },
+      "sourceType": "module"
     },
     "plugins": [
         "react"
@@ -40,6 +43,12 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "comma-dangle": 0,
+        "react/jsx-uses-vars": 1,
+        "react/display-name": 1,
+        "no-unused-vars": "warn",
+        "no-console": 1,
+        "no-unexpected-multiline": "warn"
     }
 };

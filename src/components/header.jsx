@@ -29,7 +29,7 @@ export default class Header extends Component {
         </div>
         <input 
           type="text" 
-          onChange={ this.inputChangeHandler }
+          onChange={this.inputChangeHandler}
         />
         <div className="text">{this.state.title}</div>
         <div className="text">{this.state.keywords}</div>
