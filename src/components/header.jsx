@@ -1,22 +1,39 @@
 import React, { Component } from "react";
+import "../css/style.css";
+// import "./playground";
 
 export default class Header extends Component {
+  // cpnstructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     keywords: "Hello"
+  //   }
+  // }
+  state = { 
+    title: "The keywords are:",
+    keywords: ""
+  }
+
+  inputChangeHandler = (event) => {
+    // console.log(event.target.value);
+    this.setState({
+      keywords: event.target.value
+    });
+  }
   render() {
-    const style = {
-      Header: {
-        background: "#03a9f4" 
-      },
-      logo: {
-        color: "#fff",
-        fontFamily: "Anton",
-        textAlign: "center"
-      }
-    }
+    console.log(this.state.keywords);
     return (
-      <Header>
-        <div>LOGO</div>
-        <input type="text" />
-      </Header>
+      <header>
+        <div className="logo">
+            LOGO
+        </div>
+        <input 
+          type="text" 
+          onChange={ this.inputChangeHandler }
+        />
+        <div className="text">{this.state.title}</div>
+        <div className="text">{this.state.keywords}</div>
+      </header>
     );
-  },
-};
+  }
+}
