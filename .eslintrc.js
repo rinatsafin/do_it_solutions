@@ -44,6 +44,27 @@ module.exports = {
             "error",
             "always"
         ],
+        "react/prop-types": [
+          1, 
+          { 
+            ignore: [ 
+              'children'
+            ]
+          }
+        ],
+        // propTypes: {
+        //   children: React.PropTypes.oneOfType([
+        //     React.PropTypes.arrayOf(React.PropTypes.node),
+        //     React.PropTypes.node,
+        //     React.PropTypes.element.isRequired,
+        //     React.PropTypes.node.isRequired
+        //   ])
+        // },
+        // getDefaultProps: function() {
+        //   return {
+        //     children: null // or [] I guess
+        //   };
+        // },
         "comma-dangle": 0,
         "react/jsx-uses-vars": 1,
         "react/display-name": 1,
